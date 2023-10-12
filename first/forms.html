@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="normalize.css" />
+  <meta name="viewport" content="width=device-width">
+  <title>Forms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="root">
+  <main>
+    <h1>Forms</h1>
+    <div>
+      <form action="#">
+        <h2>Регистрация</h2>
+        <fieldset>
+          <legend>Персональные данные</legend>
+          <label for="fname">Имя</label><br>
+          <input type="text" id="fname" name="fname" placeholder="Иван" required><br><br>
+          <label for="lname">Фамилия</label><br>
+          <input type="text" id="lname" name="lname" placeholder="Иванов" required><br><br>
+          <label for="email">Электронная почта</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+          <label for="birthday">Дата рождения</label><br>
+          <input type="date" id="birthday" name="birthday" required><br><br>
+        </fieldset>
+        <fieldset>
+          <legend>Придумайте логин и пароль</legend>
+          <input type="text" placeholder="Логин" id="login" name="login" required>
+          <input type="password" placeholder="Пароль" id="password" name="password" required>
+        </fieldset>
+        <input type="reset" value="Очистить форму">
+        <input type="submit" value="Сохранить данные">
+      </form>
+      <form action="#" class="second-form">
+        <h2>Форма №2</h2>
+        <label for="number">Число</label><br>
+        <input type="number" id="number" name="number"><br><br>
+        <label for="range">Ползунок</label><br>
+        <input type="range" id="range" name="range"><br><br>
+        <label for="checkbox">Чекбокс</label><br>
+        <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+        <label for="radio1">Первый радиобаттон</label><br>
+        <input type="radio" id="radio1" name="radio"><br><br>
+        <label for="radio2">Второй радиобаттон</label><br>
+        <input type="radio" id="radio2" name="radio"><br><br>
+        <label for="select">Выпадающий список</label><br>
+        <select id="select" name="select">
+          <option value="option1">1</option>
+          <option value="option2">2</option>
+          <option value="option3">3</option>
+        </select><br><br>
+        <label for="file">Поле для загрузки файла</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <label for="date">Поле для ввода даты</label><br>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="time">Поле для ввода времени</label><br>
+        <input type="time" id="time" name="time"><br><br>
+        <label for="color">Поле для выбора цвета</label><br>
+        <input type="color" id="color" name="color"><br><br>
+        <label for="search">Поле для поиска</label><br>
+        <input type="search" id="search" name="search"><br><br>
+        <label for="url">Поле для ввода URL</label><br>
+        <input type="url" id="url" name="url"><br><br>
+        <label for="tel">Поле для ввода телефона</label><br>
+        <input type="tel" id="tel" name="tel" placeholder="+7 (123) 456-78-90"
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18"><br><br>
+        <label for="month">Поле для ввода месяца</label><br>
+        <input type="month" id="month" name="month"><br><br>
+        <label for="week">Поле для ввода недели</label><br>
+        <input type="week" id="week" name="week"><br><br>
+        <label for="datetime-local">Поле для ввода даты и времени</label><br>
+        <input type="datetime-local" id="datetime-local" name="datetime-local"><br>
+        <button type="submit" class="form-main__btn">Сохранить данные</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
