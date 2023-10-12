@@ -1,5 +1,7 @@
 main {
   font-family: sans-serif;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 div {
@@ -15,9 +17,13 @@ label {
   line-height: 2;
 }
 
-input {
+input, button {
   font-size: 20px;
   padding: 5px;
+}
+
+button {
+  margin-bottom: 10px;
 }
 
 form {
