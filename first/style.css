@@ -1,0 +1,33 @@
+main {
+  font-family: sans-serif;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+div {
+  display: flex;
+  gap: 10px;
+}
+
+form {
+  width: 500px;
+}
+
+label {
+  line-height: 2;
+}
+
+input, button {
+  font-size: 20px;
+  padding: 5px;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+form {
+  border: 2px solid grey;
+  padding-left: 10px;
+  padding-right: 10px;
+}
