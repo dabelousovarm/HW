@@ -9,17 +9,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <div class="header">
+<body class="all-page">
+  <div class="all-page__header header">
     <div class="header__left">
       <img class="header__logo" src="img/logo.jpg">
       <nav class="header__top-nav top-nav">
-        <a href="#" class="top-nav__page">References</a>
-        <a href="#" class="top-nav__page">Guides</a>
-        <a href="#" class="top-nav__page">Plus</a>
-        <a href="#" class="top-nav__page">Blog</a>
-        <a href="#" class="top-nav__page">Play</a>
-        <a href="#" class="top-nav__page">AI Help</a>
+        <a href="#" class="top-nav__page link">References</a>
+        <a href="#" class="top-nav__page link">Guides</a>
+        <a href="#" class="top-nav__page link">Plus</a>
+        <a href="#" class="top-nav__page link">Blog</a>
+        <a href="#" class="top-nav__page link">Play</a>
+        <a href="#" class="top-nav__page link">AI Help</a>
       </nav>
     </div>
     <div class="header__right">
@@ -30,29 +30,29 @@
       </div>
       <input type="search" class="header__search-input">
       <div class="header__btns btns">
-        <a class="btns__log-in">Log in</a>
+        <a class="btns__log-in link">Log in</a>
         <button type="button" class="btns__sign-up">Sign up for free</button>
       </div>
     </div>
   </div>
-  <div class="top-menu">
-    <div class="top-menu__current-location">
-      <a href="#">References</a>
+  <div class="all-page__top-menu top-menu">
+    <div>
+      <a href="#" class="link">References</a>
       <span>></span>
-      <a href="#">HTML</a>
+      <a href="#" class="link">HTML</a>
     </div>
     <span class="top-menu__language-switcher">English (US)</span>
   </div>
-  <div class="wrapper">
+  <div class="all-page__wrapper wrapper">
     <aside class="wrapper__shared-aside shared-aside">
       <input type="text" class="shared-aside__filter" value="Filter">
-      <a href="#" class="shared-aside__page">HTML</a>
-      <a href="#" class="shared-aside__page">Tutorials</a>
-      <a href="#" class="shared-aside__page">References</a>
-      <a href="#" class="shared-aside__page">Guides</a>
+      <a href="#" class="shared-aside__page link">HTML</a>
+      <a href="#" class="shared-aside__page link">Tutorials</a>
+      <a href="#" class="shared-aside__page link">References</a>
+      <a href="#" class="shared-aside__page link">Guides</a>
     </aside>
     <main class="wrapper__main-content main-content">
-      <h1 class="main-content__title title">HTML: HyperText Markup Language</h1>
+      <h1 class="main-content__title">HTML: HyperText Markup Language</h1>
       <p class="main-content__info">
         <b>HTML</b> (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
         structure of web content. Other technologies besides HTML are generally used to describe a web page's
@@ -68,7 +68,7 @@
         includes special "elements".
       </p>
       <p class="main-content__info">The articles below can help you learn more about HTML.</p>
-      <h2 class="main-content__subtitle subtitle">Key resources</h2>
+      <h2 class="main-content__subtitle">Key resources</h2>
       <p class="main-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at purus eu lectus
         placerat dapibus.
         Mauris urna risus, rutrum eu vehicula sed, dignissim vitae eros. Maecenas non mauris vel tortor posuere pharetra
@@ -103,12 +103,12 @@
         consequat consectetur. Proin et felis ornare, viverra augue ut, congue ante.</p>
     </main>
     <aside class="wrapper__local-aside local-aside">
-      <h2 class="local-aside__header">In this article</h2>
-      <a href="#" class="local-aside__page">Key resources</a>
-      <a href="#" class="local-aside__page">Beginner's tutorials</a>
-      <a href="#" class="local-aside__page">Advanced topics</a>
-      <a href="#" class="local-aside__page">Reference</a>
-      <a href="#" class="local-aside__page">Related topics</a>
+      <h2 class="local-aside__title">In this article</h2>
+      <a href="#" class="local-aside__page link">Key resources</a>
+      <a href="#" class="local-aside__page link">Beginner's tutorials</a>
+      <a href="#" class="local-aside__page link">Advanced topics</a>
+      <a href="#" class="local-aside__page link">Reference</a>
+      <a href="#" class="local-aside__page link">Related topics</a>
     </aside>
   </div>
 </body>
