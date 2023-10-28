@@ -2,166 +2,236 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="normalize.css" />
-  <meta name="viewport" content="width=device-width">
-  <title>Second task</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="normalize.css" />
+    <meta name="viewport" content="width=device-width">
+    <title>Second task</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="all-page">
-  <div class="all-page__header header">
-    <div class="header__left">
-      <img class="header__logo" src="img/logo.jpg">
-      <nav class="header__top-nav top-nav">
-        <a href="#" class="top-nav__page link no-dec-link">References</a>
-        <a href="#" class="top-nav__page link no-dec-link">Guides</a>
-        <a href="#" class="top-nav__page link no-dec-link">Plus</a>
-        <a href="#" class="top-nav__page link no-dec-link">Blog</a>
-        <a href="#" class="top-nav__page link no-dec-link">Play</a>
-        <a href="#" class="top-nav__page link no-dec-link">AI Help</a>
-      </nav>
-    </div>
-    <div class="header__right">
-      <div class="header__theme-switcher theme-switcher">
-        <img src="https://developer.mozilla.org/static/media/theme-os-default.b14255eadab403fa2e8a.svg"
-          class="theme-switcher__icon">
-        <button type="button" class="theme-switcher__btn">Theme</button>
-      </div>
-      <input type="search" class="header__search-input">
-      <div class="header__btns btns">
-        <a class="btns__log-in link no-dec-link">Log in</a>
-        <button type="button" class="btns__sign-up">Sign up for free</button>
-      </div>
-    </div>
-  </div>
-  <div class="all-page__top-menu top-menu">
-    <div>
-      <a href="#" class="link no-dec-link">References</a>
-      <span>></span>
-      <a href="#" class="link no-dec-link">HTML</a>
-    </div>
-    <span class="top-menu__language-switcher">English (US)</span>
-  </div>
-  <div class="all-page__wrapper wrapper">
-    <aside class="wrapper__shared-aside shared-aside">
-      <input type="text" class="shared-aside__filter" value="Filter">
-      <a href="#" class="shared-aside__page link no-dec-link">HTML</a>
-      <a href="#" class="shared-aside__page link no-dec-link">Tutorials</a>
-      <a href="#" class="shared-aside__page link no-dec-link">References</a>
-      <a href="#" class="shared-aside__page link no-dec-link">Guides</a>
-    </aside>
-    <main class="wrapper__main-content main-content">
-      <h1 class="main-content__title">HTML: HyperText Markup Language</h1>
-      <p class="main-content__info">
-        <b>HTML</b> (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
-        structure of web content. Other technologies besides HTML are generally used to describe a web page's
-        appearance/presentation (CSS) or functionality/behavior (JavaScript).
-      </p>
-      <p class="main-content__info">
-        "Hypertext" refers to links that connect web pages to one another, either within a single website or between
-        websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to
-        pages created by other people, you become an active participant in the World Wide Web.
-      </p>
-      <p class="main-content__info">
-        HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup
-        includes special "elements".
-      </p>
-      <p class="main-content__info">The articles below can help you learn more about HTML.</p>
-      <h2 class="main-content__subtitle">Key resources</h2>
-      <p class="main-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at purus eu lectus
-        placerat dapibus.
-        Mauris urna risus, rutrum eu vehicula sed, dignissim vitae eros. Maecenas non mauris vel tortor posuere pharetra
-        in id mauris. Morbi rutrum nunc ac tellus porta ultricies. Sed tempus turpis dolor, nec porta dui dignissim at.
-        Sed eu egestas est, quis tristique libero. Integer magna ante, tincidunt quis ipsum nec, gravida faucibus
-        ligula.
+<body>
+    <div class="wrapper">
+        <header class="wrapper__header header">
+            <div class="container header__container">
+                <div class="header__left">
+                    <img class="header__logo" src="img/logo.jpg">
+                    <nav class="header__top-nav top-nav">
+                        <a href="#" class="top-nav__page link">References</a>
+                        <a href="#" class="top-nav__page link">Guides</a>
+                        <a href="#" class="top-nav__page link">Plus</a>
+                        <a href="#" class="top-nav__page link">Blog</a>
+                        <a href="#" class="top-nav__page link">Play</a>
+                        <a href="#" class="top-nav__page link">AI Help</a>
+                    </nav>
+                </div>
 
-        In porttitor, purus quis vulputate consectetur, dui magna hendrerit mi, sit amet viverra augue eros quis enim.
-        Aliquam fermentum magna eget mattis suscipit. Sed in faucibus ante. Phasellus sodales augue luctus tempor
-        ornare. Mauris semper arcu et risus commodo vestibulum. Cras eu pretium justo. Donec faucibus velit tellus, quis
-        sollicitudin ligula fermentum quis. Vestibulum vitae sollicitudin tortor. Sed ultrices massa in fringilla
-        venenatis. Suspendisse potenti. Pellentesque pretium augue et est tincidunt molestie. Nunc vitae accumsan elit.
-        Fusce vitae facilisis risus, mollis vehicula orci. Aenean ultrices ornare pulvinar. Vivamus ut sodales nibh, nec
-        suscipit ipsum. Donec quis massa quam.
+                <div class="header__right">
+                    <div class="header__theme-switcher theme-switcher">
+                        <img src="https://developer.mozilla.org/static/media/theme-os-default.b14255eadab403fa2e8a.svg"
+                            class="theme-switcher__icon">
+                        <button type="button" class="button theme-switcher__btn">Theme</button>
+                    </div>
+                    <input type="search" class="header__search-input">
+                    <div class="header__btns btns">
+                        <a class="btns__log-in link">Log in</a>
+                        <button type="button" class="button btns__sign-up">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-        Aliquam aliquam fermentum accumsan. Mauris dapibus vitae tortor ac lacinia. Vivamus ac nibh quis tortor tempus
-        dictum eget sed sem. Suspendisse tempor magna at pellentesque feugiat. Nulla finibus non metus non pellentesque.
-        Praesent lobortis tempus magna, et ultrices turpis auctor a. Proin ac arcu ligula. Cras purus nunc, faucibus ac
-        ornare nec, laoreet eget est. Mauris a mi feugiat, placerat risus nec, porttitor nulla. Donec ultricies
-        tincidunt justo, vel placerat libero iaculis id. Quisque nec sodales lorem, vel varius justo. Vestibulum ante
-        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin metus nunc, dictum ut magna at,
-        ornare vulputate metus.
+        <div class="wrapper__breadcrumbs breadcrumbs">
+            <div class="container breadcrumbs__container">
+                <div class="">
+                    <a href="#" class="link">References</a>
+                    <span>></span>
+                    <a href="#" class="link">HTML</a>
+                </div>
+                <span class="breadcrumbs__language-switcher">English (US)</span>
+            </div>
+        </div>
 
-        Sed interdum velit nec odio convallis, id volutpat ex eleifend. Etiam sollicitudin auctor augue ut pellentesque.
-        Vestibulum id tortor varius enim pharetra dignissim. Duis in tellus commodo, viverra quam et, elementum odio.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus dui ut porta pulvinar. Suspendisse a
-        ornare dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        <main class="wrapper__main main">
+            <div class="container main__container">
+                <aside class="main__shared-aside shared-aside">
+                    <input type="text" class="shared-aside__filter" value="Filter">
+                    <a href="#" class="shared-aside__page link">HTML</a>
+                    <a href="#" class="shared-aside__page link">Tutorials</a>
+                    <a href="#" class="shared-aside__page link">References</a>
+                    <a href="#" class="shared-aside__page link">Guides</a>
+                </aside>
+                <main class="main__main-content main-content">
+                    <h1 class="main-content__title">HTML: HyperText Markup Language</h1>
+                    <p class="main-content__info">
+                        <b>HTML</b> (HyperText Markup Language) is the most basic building block of the Web. It defines
+                        the
+                        meaning
+                        and
+                        structure of web content. Other technologies besides HTML are generally used to describe a web
+                        page's
+                        appearance/presentation (CSS) or functionality/behavior (JavaScript).
+                    </p>
+                    <p class="main-content__info">
+                        "Hypertext" refers to links that connect web pages to one another, either within a single
+                        website or
+                        between
+                        websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and
+                        linking it
+                        to
+                        pages created by other people, you become an active participant in the World Wide Web.
+                    </p>
+                    <p class="main-content__info">
+                        HTML uses "markup" to annotate text, images, and other content for display in a Web browser.
+                        HTML
+                        markup
+                        includes special "elements".
+                    </p>
+                    <p class="main-content__info">The articles below can help you learn more about HTML.</p>
+                    <h2 class="main-content__subtitle">Key resources</h2>
+                    <p class="main-content__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
+                        purus eu
+                        lectus
+                        placerat dapibus.
+                        Mauris urna risus, rutrum eu vehicula sed, dignissim vitae eros. Maecenas non mauris vel tortor
+                        posuere
+                        pharetra
+                        in id mauris. Morbi rutrum nunc ac tellus porta ultricies. Sed tempus turpis dolor, nec porta
+                        dui
+                        dignissim
+                        at.
+                        Sed eu egestas est, quis tristique libero. Integer magna ante, tincidunt quis ipsum nec, gravida
+                        faucibus
+                        ligula.
 
-        Curabitur justo tortor, porta at est vel, rutrum mollis elit. Sed quis tempor quam, vitae dictum dolor.
-        Curabitur in tincidunt ante. Mauris vestibulum felis a nulla vehicula scelerisque. Integer egestas sagittis
-        risus, at tempor neque malesuada ac. Suspendisse dapibus condimentum dolor ornare commodo. Curabitur convallis
-        consequat consectetur. Proin et felis ornare, viverra augue ut, congue ante.</p>
-    </main>
-    <aside class="wrapper__local-aside local-aside">
-      <h2 class="local-aside__title">In this article</h2>
-      <a href="#" class="local-aside__page link no-dec-link">Key resources</a>
-      <a href="#" class="local-aside__page link no-dec-link">Beginner's tutorials</a>
-      <a href="#" class="local-aside__page link no-dec-link">Advanced topics</a>
-      <a href="#" class="local-aside__page link no-dec-link">Reference</a>
-      <a href="#" class="local-aside__page link no-dec-link">Related topics</a>
-    </aside>
-  </div>
-  <footer class="footer">
-    <div class="footer__footer-top">
-      <div class="footer__main-info main-info">
-        <a href="#" class="main-info__mdn link no-dec-link">mdn</a>
-        <p class="main-info__text">Your blueprint for a better internet.</p>
-        <img src="img/2.jpg" alt="соцсети" class="main-info__icons">
-      </div>
-      <div class="footer__news news">
-        <h3 class="news__title">MDN</h3>
-        <a href="#" class="news__news-info link no-dec-link">About</a>
-        <a href="#" class="news__news-info link no-dec-link">Blog</a>
-        <a href="#" class="news__news-info link no-dec-link">Careers</a>
-        <a href="#" class="news__news-info link no-dec-link">Advertise with us</a>
-      </div>
-      <div class="footer__news news">
-        <h3 class="news__title">Support</h3>
-        <a href="#" class="news__news-info link no-dec-link">Product help</a>
-        <a href="#" class="news__news-info link no-dec-link">Report an issue</a>
-      </div>
-      <div class="footer__news news">
-        <h3 class="news__title">Our communities</h3>
-        <a href="#" class="news__news-info link no-dec-link">MDN Community</a>
-        <a href="#" class="news__news-info link no-dec-link">MDN Forum</a>
-        <a href="#" class="news__news-info link no-dec-link">MDN Chat</a>
-      </div>
-      <div class="footer__news news">
-        <h3 class="news__title">Developers</h3>
-        <a href="#" class="news__news-info link no-dec-link">Web Technologies</a>
-        <a href="#" class="news__news-info link no-dec-link">Learn Web Development</a>
-        <a href="#" class="news__news-info link no-dec-link">MDN Plus</a>
-        <a href="#" class="news__news-info link no-dec-link">Hacks Blog</a>
-      </div>
+                        In porttitor, purus quis vulputate consectetur, dui magna hendrerit mi, sit amet viverra augue
+                        eros
+                        quis
+                        enim.
+                        Aliquam fermentum magna eget mattis suscipit. Sed in faucibus ante. Phasellus sodales augue
+                        luctus
+                        tempor
+                        ornare. Mauris semper arcu et risus commodo vestibulum. Cras eu pretium justo. Donec faucibus
+                        velit
+                        tellus,
+                        quis
+                        sollicitudin ligula fermentum quis. Vestibulum vitae sollicitudin tortor. Sed ultrices massa in
+                        fringilla
+                        venenatis. Suspendisse potenti. Pellentesque pretium augue et est tincidunt molestie. Nunc vitae
+                        accumsan
+                        elit.
+                        Fusce vitae facilisis risus, mollis vehicula orci. Aenean ultrices ornare pulvinar. Vivamus ut
+                        sodales
+                        nibh,
+                        nec
+                        suscipit ipsum. Donec quis massa quam.
+
+                        Aliquam aliquam fermentum accumsan. Mauris dapibus vitae tortor ac lacinia. Vivamus ac nibh quis
+                        tortor
+                        tempus
+                        dictum eget sed sem. Suspendisse tempor magna at pellentesque feugiat. Nulla finibus non metus
+                        non
+                        pellentesque.
+                        Praesent lobortis tempus magna, et ultrices turpis auctor a. Proin ac arcu ligula. Cras purus
+                        nunc,
+                        faucibus
+                        ac
+                        ornare nec, laoreet eget est. Mauris a mi feugiat, placerat risus nec, porttitor nulla. Donec
+                        ultricies
+                        tincidunt justo, vel placerat libero iaculis id. Quisque nec sodales lorem, vel varius justo.
+                        Vestibulum
+                        ante
+                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin metus nunc, dictum
+                        ut
+                        magna
+                        at,
+                        ornare vulputate metus.
+
+                        Sed interdum velit nec odio convallis, id volutpat ex eleifend. Etiam sollicitudin auctor augue
+                        ut
+                        pellentesque.
+                        Vestibulum id tortor varius enim pharetra dignissim. Duis in tellus commodo, viverra quam et,
+                        elementum
+                        odio.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus dui ut porta pulvinar.
+                        Suspendisse
+                        a
+                        ornare dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+                        Curabitur justo tortor, porta at est vel, rutrum mollis elit. Sed quis tempor quam, vitae dictum
+                        dolor.
+                        Curabitur in tincidunt ante. Mauris vestibulum felis a nulla vehicula scelerisque. Integer
+                        egestas
+                        sagittis
+                        risus, at tempor neque malesuada ac. Suspendisse dapibus condimentum dolor ornare commodo.
+                        Curabitur
+                        convallis
+                        consequat consectetur. Proin et felis ornare, viverra augue ut, congue ante.</p>
+                </main>
+                <aside class="main__local-aside local-aside">
+                    <h2 class="local-aside__title">In this article</h2>
+                    <a href="#" class="local-aside__page link">Key resources</a>
+                    <a href="#" class="local-aside__page link">Beginner's tutorials</a>
+                    <a href="#" class="local-aside__page link">Advanced topics</a>
+                    <a href="#" class="local-aside__page link">Reference</a>
+                    <a href="#" class="local-aside__page link">Related topics</a>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="wrapper__footer footer">
+            <div class="footer__footer-top">
+                <div class="footer__main-info main-info">
+                    <a href="#" class="main-info__mdn link">mdn</a>
+                    <p class="main-info__text">Your blueprint for a better internet.</p>
+                    <img src="img/2.jpg" alt="соцсети" class="main-info__icons">
+                </div>
+                <div class="footer__news news">
+                    <h3 class="news__title">MDN</h3>
+                    <a href="#" class="news__news-info link">About</a>
+                    <a href="#" class="news__news-info link">Blog</a>
+                    <a href="#" class="news__news-info link">Careers</a>
+                    <a href="#" class="news__news-info link">Advertise with us</a>
+                </div>
+                <div class="footer__news news">
+                    <h3 class="news__title">Support</h3>
+                    <a href="#" class="news__news-info link">Product help</a>
+                    <a href="#" class="news__news-info link">Report an issue</a>
+                </div>
+                <div class="footer__news news">
+                    <h3 class="news__title">Our communities</h3>
+                    <a href="#" class="news__news-info link">MDN Community</a>
+                    <a href="#" class="news__news-info link">MDN Forum</a>
+                    <a href="#" class="news__news-info link">MDN Chat</a>
+                </div>
+                <div class="footer__news news">
+                    <h3 class="news__title">Developers</h3>
+                    <a href="#" class="news__news-info link">Web Technologies</a>
+                    <a href="#" class="news__news-info link">Learn Web Development</a>
+                    <a href="#" class="news__news-info link">MDN Plus</a>
+                    <a href="#" class="news__news-info link">Hacks Blog</a>
+                </div>
+            </div>
+            <div class="footer__footer-bottom footer-bottom">
+                <img class="footer-bottom__img" src="img/mozilla.jpg" alt="mozilla">
+                <div class="footer-bottom__links">
+                    <a class="footer-bottom__link" href="#">Website Privacy Notice</a>
+                    <a class="footer-bottom__link" href="#">Cookies</a>
+                    <a class="footer-bottom__link" href="#">Legal</a>
+                    <a class="footer-bottom__link" href="#">Community Participation Guidelines</a>
+                </div>
+            </div>
+            <div class="footer-bottom__paragraphs">
+                <p class="footer-bottom__par">Visit <a class="link" href="#">Mozilla Corporation’s</a>
+                    not-for-profit parent, the <a class="link" href="#">Mozilla
+                        Foundation</a>.</p>
+
+                <p class="footer-bottom__par">Portions of this content are ©1998–2023 by individual mozilla.org
+                    contributors.
+                    Content available under <a class="link" href="#">a
+                        Creative Commons license</a>.</p>
+            </div>
+        </footer>
     </div>
-    <div class="footer__footer-bottom footer-bottom">
-      <img class="footer-bottom__img" src="img/mozilla.jpg" alt="mozilla">
-      <div class="footer-bottom__links">
-        <a class="footer-bottom__link" href="#">Website Privacy Notice</a>
-        <a class="footer-bottom__link" href="#">Cookies</a>
-        <a class="footer-bottom__link" href="#">Legal</a>
-        <a class="footer-bottom__link" href="#">Community Participation Guidelines</a>
-      </div>
-    </div>
-    <div class="footer-bottom__paragraphs">
-      <p class="footer-bottom__par">Visit <a class="link" href="#">Mozilla Corporation’s</a>
-        not-for-profit parent, the <a class="link" href="#">Mozilla
-          Foundation</a>.</p>
-      <p class="footer-bottom__par">Portions of this content are ©1998–2023 by individual mozilla.org contributors.
-        Content available under <a class="link" href="#">a
-          Creative Commons license</a>.</p>
-    </div>
-  </footer>
 </body>
 
 </html>
