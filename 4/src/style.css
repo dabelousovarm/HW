@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --error: #FF3D00;
+  --error-bg: #FFEFEF;
+  --focus-bg: #E4F0FF;
+  --focus-border: #007AFF;
+}
+
+.wrapper {
+  background-color: #DCD0FF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper__registration {
+  width: 300px;
+}
+
+.registration {
+  background-color: #F2F2F7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration:hover {
+  box-shadow: 0 0 50px #b298d5;
+}
+
+.registration__title {
+  color: #b073ff;
+  padding: 20px 0;
+}
+
+.registration__inputbox {
+  width: 256px;
+  height: 74px;
+}
+
+.registration__input,
+.registration__input-password {
+  width: 100%;
+  height: 34px;
+  border: 0.5px solid #C0C6C9;
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 2px 0;
+  box-sizing: border-box;
+}
+
+.registration__input:focus,
+.registration__input-password:focus {
+  background-color: var(--focus-bg);
+  outline: none;
+  border-color: var(--focus-border);
+}
+
+.registration__input-error {
+  background-color: var(--error-bg);
+  border-color: var(--error);
+}
+
+.registration__input-error:focus {
+  background-color: var(--error-bg);
+  outline: none;
+  border-color: var(--error);
+}
+
+.registration__error {
+  color: var(--error);
+  font-size: 10px;
+}
+
+.registration__label {
+  font-size: 10px;
+  color: #586870;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background-color: #b073ff;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+  border: 0.5px solid #6f00ff;
+  border-color: #6f00ff;
+}
+
+.registration__btn {
+  width: 145px;
+  height: 25px;
+  margin: 10px 0 20px 0;
+}
+
+.registration__check {
+  padding-left: 0.4em;
+  margin-top: 10px;
+}
+
+.check {
+  font-size: 11px;
+  color: #586870;
+}
+
+.check__input {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.check__box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 0 0 0.1em #868686;
+  margin-left: -1.3em;
+  margin-top: 0.1em;
+  border-radius: 0.05em;
+}
+
+.check__input:checked + .check__box {
+  background-color: #bababa;
+  background-image: url(../img/check.svg);
+}
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 0 0.1em #586870;
+  box-shadow: 0 0 0 0.2em #b073ff;
+}
+
+.registration__error-checkbox {
+  margin: 2px 0 0 7px;
+}
+
+.wrapper__message {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}

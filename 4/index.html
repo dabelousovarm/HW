@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="src/normalize.css" />
+  <meta name="viewport" content="width=device-width">
+  <title>Fourth task</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body class="wrapper">
+  <form action="/" class="wrapper__registration registration" id="form" novalidate>
+    <h2 class="registration__title">Регистрация</h2>
+    <div class="registration__inputbox">
+      <label class="registration__label" for="fullName">ФИО*</label><br>
+      <input class="registration__input" type="text" id="fullName">
+      <div class="registration__error" id="error-name"></div>
+    </div>
+    <div class="registration__inputbox">
+      <label class="registration__label" for="email">Email*</label><br>
+      <input class="registration__input" type="email" id="email">
+      <div class="registration__error" id="error-email"></div>
+    </div>
+    <div class="registration__inputbox">
+      <label class="registration__label" for="password">Пароль*</label><br>
+      <input class="registration__input-password" type="password" id="password">
+      <div class="registration__error" id="error-password"></div>
+    </div>
+    <div class="registration__inputbox">
+      <label class="registration__label" for="password_2">Подтверждение пароля*</label><br>
+      <input class="registration__input" type="password" id="password_2">
+      <div class="registration__error" id="error-password-2"></div>
+    </div>
+    <label class="registration__check check">
+      <input type="checkbox" class="check__input" id="check__input">
+      <span class="check__box"></span>
+      Я подтверждаю, что хочу зарегистрироваться
+    </label>
+    <div class="registration__error registration__error-checkbox" id="error-checkbox"></div>
+    <button class="registration__btn btn" type="submit">Зарегистрироваться</button>
+  </form>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
