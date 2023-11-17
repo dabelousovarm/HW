@@ -24,7 +24,7 @@
     </div>
     <div class="registration__inputbox">
       <label class="registration__label" for="password">Пароль*</label><br>
-      <input class="registration__input-password" type="text" id="password">
+      <input class="registration__input-password" type="password" id="password">
       <div class="registration__error" id="error-password"></div>
     </div>
     <div class="registration__inputbox">
@@ -33,10 +33,11 @@
       <div class="registration__error" id="error-password-2"></div>
     </div>
     <label class="registration__check check">
-      <input type="checkbox" class="check__input">
+      <input type="checkbox" class="check__input" id="check__input">
       <span class="check__box"></span>
       Я подтверждаю, что хочу зарегистрироваться
     </label>
+    <div class="registration__error registration__error-checkbox" id="error-checkbox"></div>
     <button class="registration__btn btn" type="submit">Зарегистрироваться</button>
   </form>
   <script src="src/index.js"></script>

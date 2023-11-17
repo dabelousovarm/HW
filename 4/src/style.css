@@ -94,14 +94,24 @@
   cursor: pointer;
 }
 
+.btn:focus {
+  outline: none;
+  border: 0.5px solid #6f00ff;
+  border-color: #6f00ff;
+}
+
 .registration__btn {
   width: 145px;
   height: 25px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
+}
+
+.registration__check {
+  padding-left: 0.4em;
+  margin-top: 10px;
 }
 
 .check {
-  padding-left: 0.4em;
   font-size: 11px;
   color: #586870;
 }
@@ -116,16 +126,28 @@
   position: absolute;
   width: 1em;
   height: 1em;
-  box-shadow: 0 0 0 0.1em #007AFF;
+  box-shadow: 0 0 0 0.1em #868686;
   margin-left: -1.3em;
   margin-top: 0.1em;
   border-radius: 0.05em;
 }
 
 .check__input:checked + .check__box {
-  background-color: #007AFF;
+  background-color: #bababa;
+  background-image: url(../img/check.svg);
 }
 
 .check__input:focus + .check__box {
-  box-shadow: 0 0 0 0.1em rgb(31, 236, 110)
+  box-shadow: 0 0 0 0.1em #586870;
+  box-shadow: 0 0 0 0.2em #b073ff;
+}
+
+.registration__error-checkbox {
+  margin: 2px 0 0 7px;
+}
+
+.wrapper__message {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
 }

@@ -7,9 +7,8 @@ const error_name = document.getElementById("error-name");
 const error_email = document.getElementById("error-email");
 const error_password = document.getElementById("error-password");
 const error_password_2 = document.getElementById("error-password-2");
-// const reg = /^(?=.*?[^A-Z0-9_])(?=.*?[A-Z])/i;
-// const regDigit = /^(?=.*?[\d])(?=.*?[A-Z])/i;
-// const regSymbols = /^(?=.*?[\W])(?=.*?[A-Z])/i;
+const check_input = document.getElementById("check__input");
+const error_checkbox = document.getElementById("error-checkbox");
 const re = /^((?=.*?[^A-Z0-9])|(?=.*?[\d]))(?=.*?[A-Z])/i;
 const sp = /\s+/;
 const remail = /^[a-zA-Z]{3}@{1}[a-zA-Z]{3}\.[a-zA-Z]{2}$/;
@@ -42,6 +41,8 @@ form.addEventListener("submit", (e) => {
     error_email.innerText = "Максимальный размер строки 100 символов";
     email.classList.add("registration__input-error");
   } else if (!remail.test(email.value)) {
+    e.preventDefault();
+    cnt++;
     error_email.innerText =
       "Введите email в формате xxx@xxx.xx (x - буква латинского алфавита)";
     email.classList.add("registration__input-error");
@@ -61,13 +62,15 @@ form.addEventListener("submit", (e) => {
     error_password.innerText = "Пароль должен содержать от 8 до 30 символов";
     password.classList.add("registration__input-error");
   } else if (sp.test(password.value)) {
+    e.preventDefault();
+    cnt++;
     error_password.innerText = "Пароль не должен содержать пробелов";
     password.classList.add("registration__input-error");
   } else if (!re.test(password.value)) {
     e.preventDefault();
     cnt++;
     error_password.innerText =
-      "В пароле должен быть минимум 1 небуквенный символ (“@”, “-”, “:” и тп)";
+      "В пароле должен быть минимум 1 небуквенный символ (цифра или “@”, “-”, “:” и тп) и минимум 1 буква";
     password.classList.add("registration__input-error");
   } else if (password.classList.contains("registration__input-error")) {
     password.classList.remove("registration__input-error");
@@ -88,6 +91,8 @@ form.addEventListener("submit", (e) => {
     password.classList.contains("registration__input-error") &&
     password.value === password_2.value
   ) {
+    e.preventDefault();
+    cnt++;
     error_password_2.innerText = error_password.innerText;
     password_2.classList.add("registration__input-error");
   } else if (password_2.classList.contains("registration__input-error")) {
@@ -95,21 +100,23 @@ form.addEventListener("submit", (e) => {
     error_password_2.innerText = "";
   }
 
+  if (!check_input.checked) {
+    e.preventDefault();
+    cnt++;
+    error_checkbox.innerText =
+      "Вы обязаны подтвердить, что хотите зарегистрироваться";
+  } else if (error_checkbox.value !== "") {
+    error_checkbox.innerText = "";
+  }
+
   if (cnt === 0) {
     localStorage.setItem(full_name.value, password.value);
     localStorage.setItem(email.value, password.value);
+    const message = document.createElement("p");
+    message.className = "wrapper__message";
+    message.textContent = "Вы успешно зарегистрированы!";
+    document.body.appendChild(message);
+    form.style.display = "none";
+    e.preventDefault();
   }
-
-  // if (!re.test("dfg")) {
-  //   error_password.innerText = "Нет цифр";
-  // }
 });
-
-// password.addEventListener("keydown", function () {
-//   if (event.keyCode === 8) {
-//     if (password.classList.contains("registration__input-error")) {
-//       password.classList.remove("registration__input-error");
-//       error_password.innerText = "";
-//     }
-//   }
-// });
