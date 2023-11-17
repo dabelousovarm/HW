@@ -97,5 +97,35 @@
 .registration__btn {
   width: 145px;
   height: 25px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+.check {
+  padding-left: 0.4em;
+  font-size: 11px;
+  color: #586870;
+}
+
+.check__input {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.check__box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 0 0 0.1em #007AFF;
+  margin-left: -1.3em;
+  margin-top: 0.1em;
+  border-radius: 0.05em;
+}
+
+.check__input:checked + .check__box {
+  background-color: #007AFF;
+}
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 0 0.1em rgb(31, 236, 110)
 }

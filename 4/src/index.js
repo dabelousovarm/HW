@@ -12,6 +12,7 @@ const error_password_2 = document.getElementById("error-password-2");
 // const regSymbols = /^(?=.*?[\W])(?=.*?[A-Z])/i;
 const re = /^((?=.*?[^A-Z0-9])|(?=.*?[\d]))(?=.*?[A-Z])/i;
 const sp = /\s+/;
+const remail = /^[a-zA-Z]{3}@{1}[a-zA-Z]{3}\.[a-zA-Z]{2}$/;
 
 form.addEventListener("submit", (e) => {
   let cnt = 0;
@@ -39,6 +40,10 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     cnt++;
     error_email.innerText = "Максимальный размер строки 100 символов";
+    email.classList.add("registration__input-error");
+  } else if (!remail.test(email.value)) {
+    error_email.innerText =
+      "Введите email в формате xxx@xxx.xx (x - буква латинского алфавита)";
     email.classList.add("registration__input-error");
   } else if (email.classList.contains("registration__input-error")) {
     email.classList.remove("registration__input-error");
