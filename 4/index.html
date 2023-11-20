@@ -12,8 +12,8 @@
 <body class="wrapper">
   <form action="/" class="wrapper__registration registration" id="form" novalidate>
     <h2 class="registration__title">Регистрация</h2>
-    <div class="registration__inputbox">
-      <label class="registration__label" for="fullName">ФИО*</label><br>
+    <div class="registration__inputbox"> <!-- Это хороший кандидат на вынос в отдельный БЭМ блок. Поскольку сейчас у тебя все что внутри контрола "завязано" на registration блок, хотя на деле это относится конкретно к контролу + контрол может быть и вне формы-->
+      <label class="registration__label" for="fullName">ФИО*</label><br> <!-- Я уже говорил по пооводу br-->
       <input class="registration__input" type="text" id="fullName">
       <div class="registration__error" id="error-name"></div>
     </div>
