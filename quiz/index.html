@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="src/normalize.css" />
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body class="wrapper">
+  <div class="wrapper__card card" id="card">
+    <h1 class="wrapper__title">Quiz</h1>
+    <h2 class="card__question" id="question">Question?</h2>
+    <div class="card__answers answers" id="answers">
+      <button class="answers__btn button" type="button" id="btn-first"></button>
+      <button class="answers__btn button" type="button" id="btn-second"></button>
+      <button class="answers__btn button" type="button" id="btn-third"></button>
+      <button class="answers__btn button" type="button" id="btn-fourth"></button>
+    </div>
+    <span class="answers__error" id="error">Please, select an answer :3</span>
+    <button class="card__next button" id="next">Start!</button>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>

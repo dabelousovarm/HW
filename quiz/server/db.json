@@ -1,0 +1,50 @@
+{
+   "questions": [
+    {
+      "id": 1,
+      "question": "7 * 8 =",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "56"
+        },
+        {
+          "id": 2,
+          "answer": "1"
+        },
+        {
+          "id": 3,
+          "answer": "3"
+        },
+        {
+          "id": 4,
+          "answer": "2"
+        }
+      ], 
+      "correctAnswerId": 1
+    },
+    {
+      "id": 2,
+      "question": "2 + 1 = ?",
+      "answers": [
+        {
+          "id": 1,
+          "answer": "5"
+        },
+        {
+          "id": 2,
+          "answer": "1111111"
+        },
+        {
+          "id": 3,
+          "answer": "3"
+        },
+        {
+          "id": 4,
+          "answer": "2131232"
+        }
+      ], 
+      "correctAnswerId": 3
+    }
+  ]
+}
