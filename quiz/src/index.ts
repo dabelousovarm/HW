@@ -1,16 +1,18 @@
-// import {IAnswer, IUserAnswer, IQuestion, IScore} from './models/models';
+import {IAnswer, IUserAnswer, IQuestion, IScore} from './models/models';
+import './style.css';
+import './normalize.css';
 
 const SERVER_URL = 'http://localhost:3000/';
 
- async function get<T>(url: string): Promise<T> {
+async function get<T>(url: string): Promise<T> {
     const api = `${SERVER_URL}${url}`;
-
+    
     return (await fetch(api)).json();
 }
 
- async function post<T>(data: any): Promise<T> {
+async function post<T>(data: any): Promise<T> {
     const api = `${SERVER_URL}`;
-
+    
     return (await fetch(api, {
         method: 'post',
         headers: {
@@ -20,8 +22,7 @@ const SERVER_URL = 'http://localhost:3000/';
     })).json();
 }
 
-const question_ = document.querySelector<HTMLHeadingElement>('#question')!;
-const answers_ = document.querySelector<HTMLDivElement>('#answers')!;
+const questionEl = document.querySelector<HTMLHeadingElement>('#question')!;
 const next = document.querySelector<HTMLButtonElement>('#next')!;
 
 const btnFirst = document.querySelector<HTMLButtonElement>('#btn-first')!;
@@ -31,26 +32,26 @@ const btnFourth = document.querySelector<HTMLButtonElement>('#btn-fourth')!;
 const error = document.querySelector<HTMLSpanElement>('#error');
 const btns = document.querySelector<HTMLDivElement>('#answers');
 
- interface IAnswer {
-  id: number;
-  answer: string;
-}
+//  interface IAnswer {
+//   id: number;
+//   answer: string;
+// }
 
- interface IUserAnswer {
-  questionId: number;
-  answerId: number;
-}
+//  interface IUserAnswer {
+//   questionId: number;
+//   answerId: number;
+// }
 
- interface IQuestion {
-  id: number;
-  question: string;
-  answers: IAnswer[];
-  correctAnswerId: number;
-}
+//  interface IQuestion {
+//   id: number;
+//   question: string;
+//   answers: IAnswer[];
+//   correctAnswerId: number;
+// }
 
- interface IScore {
-  score: number;
-}
+//  interface IScore {
+//   score: number;
+// }
 
 
 let questionNumber = 0;
@@ -79,7 +80,7 @@ async function getQuestions() {
   async function showScore() {
     hideElements();
     const {score} = await calculateResult(answers);
-    question_.innerHTML = `You scored ${score} out of ${questions.length}`;
+    questionEl.innerHTML = `You scored ${score} out of ${questions.length}`;
     next.innerHTML = 'Play Again';
 }
 
@@ -164,6 +165,6 @@ function showAnswers(question: IQuestion) {
 
 function showQuestion() {
     let question = questions[questionNumber];
-    question_.innerHTML = `${questionNumber+1}. ${question.question}`;
+    questionEl.innerHTML = `${questionNumber+1}. ${question.question}`;
     showAnswers(question);
 }

@@ -1,6 +1,6 @@
-const jsonServer = require("json-server");
+const jsonServer = require('json-server');
 const server = jsonServer.create();
-const router = jsonServer.router("server/db.json");
+const router = jsonServer.router('server/db.json');
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
@@ -8,8 +8,8 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 // временно украла
-server.post("/", (req, res) => {
-  const questions = router.db.get("questions").value();
+server.post('/', (req, res) => {
+  const questions = router.db.get('questions').value();
   const answers = req.body.answers;
   let correctAnswers = 0;
 
@@ -60,5 +60,5 @@ server.post("/", (req, res) => {
 
 server.use(router);
 server.listen(3000, () => {
-  console.log("JSON Server is running");
+  console.log('JSON Server is running');
 });
