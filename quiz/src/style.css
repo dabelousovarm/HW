@@ -68,10 +68,10 @@
   justify-content: center;
 }
 
-.question__answer--correct {
+.answers__btn--correct {
   background-color: green;
 }
 
-.question__answer--incorrect {
+.answers__btn--incorrect {
   background-color: red;
 }
