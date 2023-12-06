@@ -27,7 +27,7 @@ server.post('/', (req, res) => {
   }
 
   res.json({
-    score: correctAnswers,
+    score: correctAnswers
   });
 });
 
