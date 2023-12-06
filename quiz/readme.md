@@ -1,3 +1,3 @@
 1. Run 'npm install'
-2. Rum 'npm server'
-3. Rum 'npm serve'
+2. Run 'npm server'
+3. Run 'npm serve'
