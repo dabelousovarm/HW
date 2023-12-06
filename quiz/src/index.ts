@@ -1,27 +1,8 @@
 import { IAnswer, IUserAnswer, IQuestion, IScore } from './models/models';
+import * as restService from './rest';
 import './style.css';
 import './normalize.css';
-import { stringify } from 'querystring';
-
-const SERVER_URL = 'http://localhost:3000/';
-
-export async function get<T>(url: string): Promise<T> {
-    const api = `${SERVER_URL}${url}`;
-
-    return (await fetch(api)).json();
-}
-
-export async function post<T>(data: any): Promise<T> {
-    const api = `${SERVER_URL}`;
-
-    return (await fetch(api, {
-        method: 'post',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })).json();
-}
+// import { stringify } from 'querystring';
 
 const questionEl = document.querySelector<HTMLHeadingElement>('#question')!;
 const next = document.querySelector<HTMLButtonElement>('#next')!;
@@ -48,14 +29,14 @@ function hideElements() {
 }
 
 export async function getQuestions() {
-    return await get<IQuestion[]>('questions');
+    return await restService.get<IQuestion[]>('questions');
 }
 
 export async function calculateResult(answers: IUserAnswer[]) {
-    return await post<IScore>({ answers });
+    return await restService.post<IScore>({ answers });
 }
 
-async function showScore() {
+export async function showScore() {
     hideElements();
     const { score } = await calculateResult(answers);
     questionEl.innerHTML = `You scored ${score} out of ${questions.length}`;
@@ -63,26 +44,29 @@ async function showScore() {
 }
 
 export async function start() {
-    next.addEventListener('click', async () => {
+    if (next) {
+        next.addEventListener('click', async () => {
 
-        if (answers.length < (questionNumber) && questionNumber != 0) {
-            const error = document.querySelector<HTMLSpanElement>('#error')!;
-            error.style.display = "flex";
-            questionNumber--;
-        }
-        else if (questionNumber < questions.length) {
-            showQuestion();
-        } else {
-            await showScore();
-            questionNumber = -1;
-            answers = [];
-        }
-        questionNumber++;
-    })
+            if (answers.length < (questionNumber) && questionNumber != 0) {
+                const error = document.querySelector<HTMLSpanElement>('#error')!;
+                error.style.display = "flex";
+                questionNumber--;
+            }
+            else if (questionNumber < questions.length) {
+                showQuestion();
+            } else {
+                await showScore();
+                questionNumber = -1;
+                answers = [];
+            }
+            questionNumber++;
+        })
+    }
     questions = await getQuestions();
-}
 
-async function selectAnswer(e: MouseEvent) {
+}
+export let e: MouseEvent;
+export async function selectAnswer(e: MouseEvent) {
     const selectedAnswer = e.target as HTMLButtonElement;
 
     const answerId = +selectedAnswer.dataset.id!;
@@ -121,10 +105,12 @@ function buttonControl(btn: HTMLButtonElement, answerIndex: number, answers: IAn
     else if (btn.classList.contains("answers__btn--incorrect")) {
         btn.classList.remove("answers__btn--incorrect")
     }
-    btn.innerHTML = answers[answerIndex].answer;
-    btn.dataset.id = answers[answerIndex].id.toString();
-    btn.disabled = false;
-    btn.addEventListener('click', selectAnswer)
+    if (btn) {
+        btn.innerHTML = answers[answerIndex].answer;
+        btn.dataset.id = answers[answerIndex].id.toString();
+        btn.disabled = false;
+        btn.addEventListener('click', selectAnswer)
+    }
 }
 
 function showAnswers(question: IQuestion) {
@@ -141,7 +127,7 @@ function showAnswers(question: IQuestion) {
     buttonControl(btnFourth, 3, answers);
 }
 
-function showQuestion() {
+export function showQuestion() {
     let question = questions[questionNumber];
     questionEl.innerHTML = `${questionNumber + 1}. ${question.question}`;
     showAnswers(question);

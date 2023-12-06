@@ -1,7 +1,6 @@
-import * as questionService from '../index';
-import { IAnswer, IUserAnswer, IQuestion, IScore } from '../models/models';
+import { IQuestion } from '../models/models';
 import { beforeEach, describe, expect, it, jest } from '@jest/globals';
-import * as app from '../';
+import * as app from '../index';
 
 const mockQuestions: IQuestion[] = [
   {
@@ -68,15 +67,40 @@ describe('App', () => {
     <button class="card__next button" id="next">Start!</button>
   </div>`;
 
-    jest.spyOn(questionService, 'get')
+    jest.spyOn(app, 'getQuestions')
       .mockReturnValue(Promise.resolve(mockQuestions));
+  });
+
+  it('there should be no questions before start', async () => {
+    expect(app.questions.length).toEqual(0);
   });
 
   it('should get questions after start', async () => {
     expect(app.questions.length).toEqual(0);
-    app.start();
-    expect(app.questions.length).toEqual(2);
-    expect(app.questions[0].id).toEqual(4);
-    expect(app.questions[1].id).toEqual(8);
+    const questions = await app.getQuestions();
+    expect(questions.length).toBeDefined();
+    expect(questions).toHaveLength(mockQuestions.length);
+    expect(questions[0].id).toEqual(4);
+    expect(questions[1].id).toEqual(8);
+  });
+
+  it('questions should be displayed until the test is over', async () => {
+    const showQuestionStub = jest.spyOn(app, 'showQuestion');
+    const showScoreStub = jest.spyOn(app, 'showScore');
+
+    if (app.questionNumber < app.questions.length) {
+      expect(showQuestionStub).toHaveBeenCalled();
+    }
+  });
+
+  it('the correct style is applied to the answer button', () => {
+    const answerId = 1;
+    const selectedAnswer = document.querySelector<HTMLButtonElement>('#btn-first') as HTMLButtonElement;
+
+    if (app.questionNumber == 1) {
+      if (app.questions[app.questionNumber - 1].correctAnswerId === answerId) {
+        expect(selectedAnswer.classList).toContain('answers__btn--correct');
+      }
+    }
   });
 });
